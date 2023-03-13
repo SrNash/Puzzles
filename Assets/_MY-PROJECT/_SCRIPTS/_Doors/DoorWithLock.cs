@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DoorWithLock : MonoBehaviour
 {
+    [Header("Player Input")]
+    [Tooltip("Player Input, configuracion de inputs del Player")]
+    [SerializeField] private PlayerInput _playerInput;
+
     [Header("Door Prefabs")]
     [Tooltip("Prefab de la puerta")]
     [SerializeField]private GameObject _door;
 
     [Header("Inventory")]
     [Tooltip("Llave del inventario")]
-    [SerializeField]private GameObject _keyINV;
+    [SerializeField]private GameObject _cardIDInv;
 
     [Header("Animator")]
     [Tooltip("Animator de la puerta")]
@@ -33,8 +38,9 @@ public class DoorWithLock : MonoBehaviour
 
     [Header("Unlock/Lock")]
     [SerializeField] private bool _unlocked = false;
-    [SerializeField] private bool _locked = true;
-    [SerializeField] private bool _hasKey;
+    /*[SerializeField] private*/ public bool _locked = true;
+    /*[SerializeField] private*/public  bool _hasKey;
+    //public bool HasKey { get { return _hasKey; } set { _hasKey = value; } }
 
     [Header("Control Bool")]
     [Tooltip("Booleans de control")]
@@ -61,17 +67,22 @@ public class DoorWithLock : MonoBehaviour
             _hasKey = false;
         }*/
 
-        if (_hasKey && _inReach && Input.GetKeyDown("f"))   //cambiar GetKeyDown -> GetButtonDown
+        if (_hasKey && _inReach && _playerInput.actions["Interaction"].WasPressedThisFrame())   //cambiar GetKeyDown -> GetButtonDown
         {
             _unlocked = true;
             DoorOpen();
-        }else
+        }
+        else if (_isOpens && _inReach && _playerInput.actions["Interaction"].WasPressedThisFrame())
+        {
+            DoorClose();
+        }
+        else if(_locked)
         {
             Debug.Log("Cerrada con llave");
             DoorClose();
         }
 
-        if(_locked && _inReach && Input.GetKeyDown("f"))
+        if(_locked && _inReach && _playerInput.actions["Interaction"].WasPressedThisFrame())
         {
             Debug.Log("Cerrada con llave 2");
             _lockedSound.Play();

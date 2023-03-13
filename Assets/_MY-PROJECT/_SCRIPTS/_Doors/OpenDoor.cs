@@ -95,7 +95,6 @@ public class OpenDoor : MonoBehaviour
         //Seteamos las propiedades del animator
         _doorAnim.SetBool("openDoor", true);
         _doorAnim.SetBool("closeDoor", false);
-        _doorAnim.SetBool("opened", false);
         _doorAnim.SetBool("closed", false);
         _doorOpenSound.Play();
     }
@@ -110,7 +109,6 @@ public class OpenDoor : MonoBehaviour
         //Seteamos las propiedades del animator
         _doorAnim.SetBool("openDoor", false);
         _doorAnim.SetBool("closeDoor", true);
-        _doorAnim.SetBool("opened", false);
         _doorAnim.SetBool("closed", false);
         _doorCloseSound.Play();
     }

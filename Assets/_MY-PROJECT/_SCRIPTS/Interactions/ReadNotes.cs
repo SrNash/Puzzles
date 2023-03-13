@@ -28,6 +28,9 @@ public class ReadNotes : MonoBehaviour
     [Tooltip("GameObject para la interaccion con las notas")]
     [SerializeField]private GameObject _pickUpText;
 
+    [Header("Control")]
+    [SerializeField] private bool _wasPicked = false;
+
     [Header("AudioSource")]
     [Tooltip("AudioSource al recoger las notas")]
     [SerializeField] private AudioSource _pickUpSound;
@@ -47,12 +50,12 @@ public class ReadNotes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_playerInput.actions["Interaction"].WasPressedThisFrame() && _inReach)
+        if (_playerInput.actions["Interaction"].WasPressedThisFrame() && _inReach && !_wasPicked)
         {
             ReadNote();
         }
 
-        if (_playerInput.actions["Interaction"].WasPressedThisFrame())
+        else if (_playerInput.actions["Interaction"].WasPressedThisFrame() && _wasPicked)
         {
             ExitButton();
         }
@@ -60,7 +63,8 @@ public class ReadNotes : MonoBehaviour
 
     private void ReadNote()
     {
-        _noteUI.SetActive(true);
+        _wasPicked = true;
+        _noteUI.SetActive(true);    //No se activa
         _pickUpSound.Play();
         _hud.SetActive(false);
         _inv.SetActive(false);
@@ -100,6 +104,7 @@ public class ReadNotes : MonoBehaviour
     public void ExitButton()
     {
         Debug.Log("Cerrando la nota");
+        _wasPicked = false;
         _noteUI.SetActive(false);
         _hud.SetActive(true);
         _inv.SetActive(true);
