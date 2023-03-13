@@ -65,8 +65,6 @@ public class OpenDoor : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entro");
-
         if (other.CompareTag("Reach"))
         {
             _inReach = true;
@@ -76,8 +74,6 @@ public class OpenDoor : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Salio");
-
         if (other.CompareTag("Reach"))
         {
             _inReach = false;
