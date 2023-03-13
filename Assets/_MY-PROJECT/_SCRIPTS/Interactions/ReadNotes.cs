@@ -18,6 +18,10 @@ public class ReadNotes : MonoBehaviour
     [Tooltip("GameObject del Player")]
     [SerializeField] private GameObject _player;
 
+    [Header("Diaries Inventory")]
+    [Tooltip("Inventario de Diarios para almacenar las notas")]
+    [SerializeField]private GameObject _diariesInv;
+
     [Header("GameObjects")]
     [Tooltip("GameObjects que intervendrán en la interaccion con las baterias")]
     [SerializeField] private GameObject _noteUI;
@@ -72,6 +76,12 @@ public class ReadNotes : MonoBehaviour
         //_player.GetComponent<PlayerController>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        /*this.transform.parent = _diariesInv.transform;
+        this.transform.position = _diariesInv.transform.position;
+        this.GetComponent<MeshRenderer>().enabled = false;
+        this.GetComponent<BoxCollider>().enabled = false;
+        this.enabled = false;*/
     }
 
     void OnTriggerEnter(Collider other)
