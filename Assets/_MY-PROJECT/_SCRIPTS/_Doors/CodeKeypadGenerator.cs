@@ -13,6 +13,10 @@ public class CodeKeypadGenerator : MonoBehaviour
     [Tooltip("Referencia al script del Keypad")]
     [SerializeField] private Keypad _keypad;
 
+    [Header("NoteTrackGenerator")]
+    [Tooltip("Referencia al script del NoteTrackGenerator")]
+    [SerializeField] private NoteTrackGenerator _trackGenerator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +24,12 @@ public class CodeKeypadGenerator : MonoBehaviour
         {
             m_code += _characters[Random.Range(0, _characters.Length)];
         }
-        _keypad.code = m_code;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _keypad.code = m_code;
+        _trackGenerator.code = m_code;
     }
 }

@@ -3286,6 +3286,7 @@ GameObject:
   - component: {fileID: 1607094206}
   - component: {fileID: 1607094207}
   - component: {fileID: 1607094208}
+  - component: {fileID: 878506533}
   m_Layer: 0
   m_Name: HUDKeyPad
   m_TagString: Untagged
@@ -3390,6 +3391,7 @@ MonoBehaviour:
   _characters: 0123456789
   m_code: 
   _keypad: {fileID: 1607094207}
+  _trackGenerator: {fileID: 878506533}
 --- !u!114 &1607094207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3414,8 +3416,11 @@ MonoBehaviour:
   _buttonSound: {fileID: 8339610494288854699}
   _correctSound: {fileID: 3279969383211489071}
   _wrongSound: {fileID: 1145004182731075750}
-  _animate: 0
+  _solved: 0
   _solving: 0
+  _openKeypad:
+  - {fileID: 8807138014967952719}
+  - {fileID: 7510676038325570095}
 --- !u!114 &1607094208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3429,6 +3434,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keypad: {fileID: 1607094207}
+--- !u!114 &878506533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607094201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78aeaaab60348e441a5febd156af344a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noteTrack: {fileID: 0}
+  _text: {fileID: 0}
+  _code: 
+  _textsList:
+  - 'La clave de acceso es:'
+  - "Recuerda, la combinaci\xF3n de la puerta de acceso al laboratorio es:"
+  - "La contrase\xF1a de acceso del laboratorio de pruebas es:"
+  - "El Dr.Jang siempre se olvida de la contrase\xF1a, as\xED que la anot\xE9 en
+    esta nota:"
+  - "La combinaci\xF3n de la puerta es la fecha de nacimiento del Dr.Franklin."
+  - "La combinacio\xF3n de la puerta de acceso al laboratorio es:"
+  m_note: 
 --- !u!1 &1720781998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4616,7 +4645,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1106
+  m_VersionIndex: 1121
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5246,7 +5275,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4244
+  m_VersionIndex: 4259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5817,7 +5846,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7405
+  m_VersionIndex: 7420
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6218,7 +6247,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4288
+  m_VersionIndex: 4303
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6603,7 +6632,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1109
+  m_VersionIndex: 1124
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
