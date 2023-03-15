@@ -398,7 +398,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 555
+  m_VersionIndex: 564
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -522,6 +522,7 @@ MonoBehaviour:
   _playerInput: {fileID: 0}
   _inventory: {fileID: 0}
   _mesh: {fileID: 814725337454155403}
+  _collider: {fileID: 814725337454155396}
   _doors:
   - {fileID: 0}
   _openText: {fileID: 0}

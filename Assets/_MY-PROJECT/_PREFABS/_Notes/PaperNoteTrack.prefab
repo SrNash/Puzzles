@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.1615847, z: 1.063098}
-  m_Center: {x: 0, y: 0.58079237, z: 0.015459962}
+  m_Size: {x: 1.2, y: 10, z: 1.063098}
+  m_Center: {x: 0, y: 2, z: 0.015459962}
 --- !u!114 &2920604465907294005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 0}
   _inReach: 0
+  _text: {fileID: 0}
+  _codeText: {fileID: 0}
+  _trackGenerator: {fileID: 0}
   _player: {fileID: 0}
   _diariesInv: {fileID: 0}
   _noteUI: {fileID: 0}

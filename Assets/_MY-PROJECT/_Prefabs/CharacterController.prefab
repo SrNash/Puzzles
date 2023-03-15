@@ -3593,7 +3593,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073813505139119676}
-  m_LocalRotation: {x: 0.095132865, y: -0.000000019150068, z: 0.0000000018301011,
+  m_LocalRotation: {x: 0.095132865, y: 0.000000019150068, z: -0.0000000018301011,
     w: 0.9954646}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -3937,8 +3937,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073813506104288798}
-  m_LocalRotation: {x: 0.077058025, y: 0.000000017683199, z: -0.0000000013666959,
-    w: 0.9970266}
+  m_LocalRotation: {x: 0.07705803, y: -0.000000017683194, z: 0.0000000013666956, w: 0.9970266}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5965,6 +5964,25 @@ CharacterController:
   m_SkinWidth: 0.005
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &2007774836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863906087148690527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fae516f26ea0ef4cb7f283bc1570365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInput: {fileID: 5073813505102326174}
+  _cursorTransform: {fileID: 0}
+  _canvas: {fileID: 0}
+  _canvasTransform: {fileID: 0}
+  _cursorSpeed: 1000
+  _mainCamera: {fileID: 0}
+  _previousMouseState: 0
 --- !u!114 &5073813505102326174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6019,22 +6037,3 @@ MonoBehaviour:
   _playerVelocity: {x: 0, y: 0, z: 0}
   _groundedPlayer: 0
   _gravityValue: -9.81
---- !u!114 &2007774836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7863906087148690527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fae516f26ea0ef4cb7f283bc1570365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerInput: {fileID: 5073813505102326174}
-  _cursorTransform: {fileID: 0}
-  _canvas: {fileID: 0}
-  _canvasTransform: {fileID: 0}
-  _cursorSpeed: 1000
-  _mainCamera: {fileID: 0}
-  _previousMouseState: 0
