@@ -417,6 +417,28 @@
                 },
                 {
                     "name": "",
+                    "id": "fb009e0b-2fd9-4ad6-8a8c-54dc1a9215dd",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d30413c0-a03c-46bc-96f5-6ddf6258b216",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "42df0433-6eb3-4e86-8de2-f9e3c536a7a9",
                     "path": "<Mouse>/scroll",
                     "interactions": "",

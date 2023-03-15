@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class ReadNotes : MonoBehaviour
@@ -9,6 +10,11 @@ public class ReadNotes : MonoBehaviour
     [Header("Player Input")]
     [Tooltip("Player Input, configuracion de inputs del Player")]
     [SerializeField] private PlayerInput _playerInput;
+
+    [Header("Text")]
+    [Tooltip("Texto que contine la Nota")]
+    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField]private string m_text;
 
     [Header("Reach")]
     [Tooltip("Variable de control de alcance")]
@@ -76,6 +82,8 @@ public class ReadNotes : MonoBehaviour
         //_player.GetComponent<PlayerController>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        _text.text = m_text;
 
         /*this.transform.parent = _diariesInv.transform;
         this.transform.position = _diariesInv.transform.position;
