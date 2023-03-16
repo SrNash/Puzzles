@@ -2460,7 +2460,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 239
+  m_VersionIndex: 248
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2680,6 +2680,7 @@ GameObject:
   - component: {fileID: 2001709363866140376}
   - component: {fileID: 2001709363866140378}
   - component: {fileID: 2001709363866140379}
+  - component: {fileID: 5959609841906799713}
   m_Layer: 0
   m_Name: WallSimpleDooKeypad
   m_TagString: Untagged
@@ -2739,6 +2740,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 2.25, z: 0.91195107}
   m_Center: {x: 1, y: 1.125, z: 0.030193806}
+--- !u!114 &5959609841906799713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001709363866140377}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee7c675562cb5304180edaca6332412a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInput: {fileID: 0}
+  _door: {fileID: 2001709363866140377}
+  _doorAnim: {fileID: 2001709363866140378}
+  _openText: {fileID: 0}
+  _doorOpenSound: {fileID: 0}
+  _doorCloseSound: {fileID: 0}
+  _inReach: 0
+  _isOpens: 0
+  _isCloses: 1
 --- !u!1 &2001709363896601595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,7 +3300,7 @@ MonoBehaviour:
   _animator: {fileID: 2001709363866140378}
   _textOB: {fileID: 2001709365471695018}
   _code: 
-  _openDoor: {fileID: 2001709365369916422}
+  _openDoor: {fileID: 5959609841906799713}
   _buttonSound: {fileID: 2001709364539925957}
   _correctSound: {fileID: 2001709363944367778}
   _wrongSound: {fileID: 2001709365552501456}
@@ -7114,7 +7136,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1917
+  m_VersionIndex: 1926
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8709,7 +8731,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1914
+  m_VersionIndex: 1923
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9254,7 +9276,6 @@ GameObject:
   - component: {fileID: 2001709365369916421}
   - component: {fileID: 2001709365369916474}
   - component: {fileID: 2001709365369916475}
-  - component: {fileID: 2001709365369916422}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -10072,7 +10093,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 350
+  m_VersionIndex: 359
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10171,27 +10192,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &2001709365369916422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001709365369916473}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7c675562cb5304180edaca6332412a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerInput: {fileID: 0}
-  _door: {fileID: 2001709363866140377}
-  _doorAnim: {fileID: 2001709363866140378}
-  _openText: {fileID: 0}
-  _doorOpenSound: {fileID: 0}
-  _doorCloseSound: {fileID: 0}
-  _inReach: 0
-  _isOpens: 0
-  _isCloses: 1
 --- !u!1 &2001709365471695019
 GameObject:
   m_ObjectHideFlags: 0
