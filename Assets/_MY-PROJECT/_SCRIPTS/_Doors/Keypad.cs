@@ -97,6 +97,8 @@ public class Keypad : MonoBehaviour
 
     public void Confirm()
     {
+        Debug.Log("Confirmando Contraseña");
+
         if (_textOB.text == _code)
         {
             _solved = true;
@@ -112,12 +114,14 @@ public class Keypad : MonoBehaviour
 
     public void Clear()
     {
+        Debug.Log("Limpiando Display");
         _textOB.text = "";
         _buttonSound.Play();
     }
 
     public void Exit()
     {
+        Debug.Log("Saliendo del Keypad");
         _keypadOB.SetActive(false);
         _inv.SetActive(true);
         _hud.SetActive(true);

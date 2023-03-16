@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8156638147043379188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8156638147043379199}
+  - component: {fileID: 8156638147043379184}
+  - component: {fileID: 8156638147043379185}
+  - component: {fileID: 8156638147043379187}
+  - component: {fileID: 8777178460325730811}
+  m_Layer: 0
+  m_Name: ReportNote
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8156638147043379199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156638147043379188}
+  m_LocalRotation: {x: -0, y: -0.961782, z: 0, w: -0.2738165}
+  m_LocalPosition: {x: 1.4789295, y: 0.133, z: 3.4923105}
+  m_LocalScale: {x: 0.6630001, y: 0.02277171, z: 0.4570253}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -211.783, z: 0}
+--- !u!33 &8156638147043379184
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156638147043379188}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8156638147043379185
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156638147043379188}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: eed3664413a335e4c832b17f0fd14306, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8156638147043379187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156638147043379188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 10, z: 1.063098}
+  m_Center: {x: 0, y: 4.9900975, z: 0.015459962}
+--- !u!114 &8777178460325730811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156638147043379188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbf2dcc7ff54514ab1f3956bc4a3946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInput: {fileID: 0}
+  _title: {fileID: 0}
+  m_title: 'Nombre del estudio: "Efectos del virus XYZ en ratones de laboratorio"'
+  _author: {fileID: 0}
+  m_author: "Informe del Dr. Tom\xE1s Gonz\xE1lez"
+  _text: {fileID: 0}
+  m_text: "Se realiz\xF3 un estudio para analizar los efectos del virus XYZ en ratones
+    de laboratorio. Los resultados mostraron que el virus causa una disminuci\xF3n
+    significativa en la actividad motora y la capacidad cognitiva de los ratones
+    infectados. Adem\xE1s, se observ\xF3 una inflamaci\xF3n significativa en el cerebro
+    y otros \xF3rganos vitales."
+  _writeTextA: {fileID: 0}
+  m_textA: "Me pregunto lo que pasar\xEDa si este virus fuese capaz de infectar humanos...."
+  _writeTextB: {fileID: 0}
+  m_textB: "A los espec\xEDmenes les cuesta moverse....y adem\xE1s, al parecer....\xBFse
+    han quedado ciegos?"
+  _writeTextC: {fileID: 0}
+  m_textC: 
+  _inReach: 0
+  _player: {fileID: 0}
+  _diariesInv: {fileID: 0}
+  _noteUI: {fileID: 0}
+  _hud: {fileID: 0}
+  _inv: {fileID: 0}
+  _pickUpText: {fileID: 0}
+  _wasPicked: 0
+  _pickUpSound: {fileID: 0}

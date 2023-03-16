@@ -25,6 +25,8 @@ public class OpenKeypad : MonoBehaviour
     [Tooltip("ReachTool para la interacción con la puerta")]
     [SerializeField] private bool _inReach = false;
 
+    [SerializeField] private bool _isOpen = false;
+
     void Start()
     {
         
@@ -33,11 +35,18 @@ public class OpenKeypad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_inReach && _playerInput.actions["Interaction"].WasPressedThisFrame())
+        if (_inReach && !_isOpen && _playerInput.actions["Interaction"].WasPressedThisFrame())
         {
+            _isOpen = true;
             _keypadOB.SetActive(true);
             _keypad.solving = true;
-            _keypad.textOB.text = "";
+            _keypad.textOB.text = "-----";
+        }
+        else if (_isOpen && _playerInput.actions["Interaction"].WasPressedThisFrame())
+        {
+            _isOpen = false;
+            _keypadOB.SetActive(false);
+            _keypad.solving = false;
         }
     }
 
