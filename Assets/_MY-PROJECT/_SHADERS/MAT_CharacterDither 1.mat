@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_CharacterDither
+  m_Name: MAT_CharacterDither 1
   m_Shader: {fileID: -6465566751694194690, guid: e08dc35dd5f846348a08c8e631071cb1,
     type: 3}
   m_ValidKeywords: []
@@ -48,11 +48,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaTjreshold: 0.3
-    - _DitherScale: 0.75
-    - _Power: 0.85
+    - _AlphaTjreshold: 0.5
+    - _DitherScale: 0.9
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0, g: 0.62896585, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.8212461, b: 0, a: 0}
   m_BuildTextureStacks: []
