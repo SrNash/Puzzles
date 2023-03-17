@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8279951465833179583}
   - component: {fileID: 8279951465833179581}
   - component: {fileID: 2920604465907294005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PaperNoteTrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c1cd1d3f7c938c74fafa3ecaf03de4d8, type: 2}
+  - {fileID: 2100000, guid: 7e2b2783e1638de44ac1529a9b7962a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

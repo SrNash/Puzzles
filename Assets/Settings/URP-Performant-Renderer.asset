@@ -22,7 +22,7 @@ MonoBehaviour:
     Intensity: 3
     DirectLightingStrength: 0.25
     Radius: 0.035
-    SampleCount: 4
+    SampleCount: 12
 --- !u!114 &-3832594355535910689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,4 +104,4 @@ MonoBehaviour:
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
   m_TileSize: 32
-  m_IntermediateTextureMode: 0
+  m_IntermediateTextureMode: 1
