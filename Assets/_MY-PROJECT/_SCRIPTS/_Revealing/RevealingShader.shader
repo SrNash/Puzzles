@@ -1,55 +1,58 @@
-//Shady
-Shader "Revealing Under Light"
+Shader "Unlit/RevealingShader"
 {
-	Properties
-	{
-		MyColor("Color", Color) = (1,1,1,1)
-		MyMainTex("Albedo (RGB)", 2D) = "white" {}
-		MyGlossiness("Smoothness", Range(0,1)) = 0.5
-		MyMetallic("Metallic", Range(0,1)) = 0.0
-		MyLightDirection("Light Direction", Vector) = (0,0,1,0)
-		MyLightPosition("Light Position", Vector) = (0,0,0,0)
-		MyLightAngle("Light Angle", Range(0,180)) = 45
-		MyStrengthScalor("Strength", Float) = 50
-	}//Properties end
-	SubShader
-	{
-		Tags{ "RenderType" = "Transparent" "Queue" = "Transparent" }
-		Blend SrcAlpha OneMinusSrcAlpha
-		LOD 200
-		CGPROGRAM
-#pragma surface SurfaceReveal Standard fullforwardshadows alpha:fade
-#pragma target 3.0
-		sampler2D MyMainTex;
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 100
 
-		struct Input
-		{
-			float2 UVMainTex;
-			float3 worldPos;
-		};//Struct end
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
 
-		half   MyGlossiness;
-		half   MyMetallic;
-		fixed4 MyColor;
-		float4 MyLightPosition;
-		float4 MyLightDirection;
-		float  MyLightAngle;
-		float  MyStrengthScalor;
+            #include "UnityCG.cginc"
 
-		void SurfaceReveal(Input input, inout SurfaceOutputStandard R)
-		{ 
-			float3 Dir      = normalize(MyLightPosition - input.worldPos);
-			float  Scale    = dot(Dir, MyLightDirection);
-			float  Strength = Scale - cos(MyLightAngle * (3.14 / 360.0));
-			Strength        = min(max(Strength * MyStrengthScalor, 0), 1);
-			fixed4 RC       = tex2D(MyMainTex, input.UVMainTex) * MyColor;
-			R.Albedo        = RC.rgb;
-			R.Emission      = RC.rgb * RC.a * Strength;
-			R.Metallic      = MyMetallic;
-			R.Smoothness    = MyGlossiness;
-			R.Alpha         = Strength * RC.a;
-		}//SurfaceReveal end
-	ENDCG
-	}//SubShader end
-		FallBack "Diffuse"
-}//Shader end
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // apply fog
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
