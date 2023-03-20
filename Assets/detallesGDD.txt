@@ -33,6 +33,17 @@ Nivel 1: La habitación inicial
 Una habitación pequeña y oscura con una puerta cerrada y una pantalla de ordenador.
 Algunos armarios y cajones en la habitación que contienen objetos útiles.
 Un escritorio con notas y documentos que pueden proporcionar pistas.
+
+El jugador es informado de la situación mediante un mensaje o conversacion con una entidad mediante una pantalla.
+(diseñar dialogo, invvestigar CHAT GPT)
+
+Al salir de esta habitación el jugador se encontrará un corredor con habitaciones más por explorar:
+- Aseo: tipicos aseos de laboratorio, con vater y lavamanos, uno de los npc perdió
+	 la identificación en dicha habitación lo que permitirá desbloquear su acceso al jugador.
+	Problema: encontrar identificación, para ell oel jugador debera explorar el aseo, una vez ubicado la identificación
+			el jugador deberá hacer uso de los items encontrado en la habitación inicial para obtenerla.
+- Sala de personal: en dicha sala es donde el jugador encontrará el código para desbloquear la puerta al laboratorio.
+
 Nivel 2: El laboratorio principal
 
 Un laboratorio grande con varias áreas de trabajo separadas por paneles de vidrio.
