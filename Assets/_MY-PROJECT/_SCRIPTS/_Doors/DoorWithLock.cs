@@ -88,15 +88,6 @@ public class DoorWithLock : MonoBehaviour
             _lockedSound.Play();
         }
     }
-
-    private void OnTriggerStay(Collider other)
-    {        
-        if (other.CompareTag("Reach"))
-        {
-            _inReach = true;
-            _openText.SetActive(true);
-        }
-    }
     
     private void OnTriggerEnter(Collider other)
     {
