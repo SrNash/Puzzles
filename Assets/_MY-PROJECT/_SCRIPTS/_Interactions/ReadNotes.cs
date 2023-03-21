@@ -101,6 +101,15 @@ public class ReadNotes : MonoBehaviour
         }
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Reach"))
+        {
+            _inReach = true;
+            _pickUpText.SetActive(true);
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Reach"))

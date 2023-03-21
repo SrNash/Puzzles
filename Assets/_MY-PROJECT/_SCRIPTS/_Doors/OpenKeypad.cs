@@ -50,6 +50,15 @@ public class OpenKeypad : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Reach"))
+        {
+            _inReach = true;
+            _keypadText.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Reach"))
