@@ -36,12 +36,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelDist: 3
-    - _Pwer: 1.5
+    - _Pwer: 50
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 2.6666667, g: 2.6666667, b: 2.6666667, a: 0}
-    - _MainColor: {r: 170.89003, g: 170.89003, b: 170.89003, a: 0}
+    - _Color: {r: 85.333336, g: 85.333336, b: 85.333336, a: 0}
+    - _MainColor: {r: 766.9961, g: 766.9961, b: 766.9961, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &619807819476793620
 MonoBehaviour:
